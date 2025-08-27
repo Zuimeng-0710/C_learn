@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 //入门第一题
 // int main({
 //     long long int num1,num2;
@@ -174,9 +175,54 @@
 
 
 //整形与布尔型的转换
-int main(){
-    
-    return 0;
-}
+// int main(){
+//     int num1;//整形
+//     scanf("%d",&num1);
+//     bool boolnum1 = num1;//整形转布尔
+//     int result = boolnum1;//布尔转整形
+//     printf("%d\n",result);
+//     return 0;
+// }
 
 //分糖果
+// int main(){
+//     int candle[6];//candle[0]不用
+//     int eaten = 0;
+//     int i;
+//     for(i = 1;i <= 5;i++){
+//         scanf("%d",&candle[i]);
+//     }
+//     int temp[6];
+//     for(i = 1;i <= 5;i++){
+//         int num = candle[i];
+//         //计算吃的糖果数量
+//         eaten += num % 3;
+//         //计算每一份的数量
+//         int per = num / 3;
+//         //自己留一份
+//         temp[i] = per; //temp为临时变量
+//         candle[i] = temp[i];
+//         //分给左边的小朋友
+//         int left,right;
+//         if(i == 1){
+//             left = 5;
+//             right = 2;
+//         }
+//         else if(i == 5){
+//             left = 4;
+//             right = 1;
+//         }
+//         else{
+//             left = i - 1;
+//             right = i + 1;
+//         }
+//         candle[left] += per;
+//         candle[right] += per;
+//     }
+//     for(i = 1;i <= 5;i++){
+//         printf("%d",candle[i]);
+//     }
+//     printf("\n");
+//     printf("%d",eaten);
+//     return 0;
+// }
