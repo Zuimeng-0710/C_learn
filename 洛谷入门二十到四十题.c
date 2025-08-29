@@ -106,13 +106,81 @@
 // }
 
 //反向输出三位数 //输入100输出001
+// int main(){
+//     int num1,reverse = 0;
+//     scanf("%d",&num1);
+//     while(num1 > 0){//数学方法反向：取余+整除 //这个方法需要学习
+//         reverse = reverse * 10 + num1 % 10;
+//         num /= 10;
+//     }
+//     printf("%d",reverse);
+//     return 0;
+// }
+
+// int main(){
+//     int arr[3];
+//     int temp;
+//     scanf("%d %d %d",&arr[0],&arr[[1],&arr[2]]);
+//     temp = arr[0];
+//     arr[0] = arr[2];
+//     arr[2] = temp;
+//     printf("%d %d %d",arr[0],arr[1],arr[2]);
+//      return 0;
+// }
+
+// int main(){
+//     int num1;
+//     scanf("%d",&num1);
+//     int units = num1 % 10;
+//     int tens = num1 / 10 % 10;
+//     int hundreds = num1 / 100;
+//     printf("%d%d%d",units,tens,hundreds);//这个点需要学习
+//     return 0;
+// }
+
+//大象喝水
+// #define PI 3.14
+// int main() {
+// 	int h, r;
+// 	scanf("%d %d", &h, &r);
+// 	double V;
+// 	V = h * r * r * PI;
+// 	double count;
+// 	count =  20000 / V;//得到的是浮点数
+// 	int count1;
+// 	count1 = 20000 / V;//得到的是整数
+// 	if ((count - count1) > 0) {
+// 		count += 1;
+// 	}
+// 	printf("%.0lf", count);
+
+// 	return 0;
+// }
+
+//计算线段长度
+// #include <math.h>
+// int main(){
+//     double x,y;
+//     double x1,y1;
+//     scanf("%lf %lf",&x,&y);
+//     scanf("%lf %lf",&x1,&y1);
+//     double coordinates;
+//     coordinates = sqrt(pow((x - x1),2)+pow((y - y1),2));
+//     printf("%.3lf",coordinates);
+
+//     return 0;
+// }
+
+//计算三角形面积
+//用鞋带公式,可以计算多边形的面积,包括三角形
+// S = 1/2 |x1y2 + x2y3 + x3y1 - (y1x2 + y2x3 + y3x1)
+#include <math.h>
 int main(){
-    int num1,reverse = 0;
-    scanf("%d",&num1);
-    while(num1 > 0){//数学方法反向：取余+整除
-        reverse = reverse * 10 + num1 % 10;
-        num /= 10;
-    }
-    printf("%d",reverse);
+    double x1,x2,x3;
+    double y1,y2,y3;
+    double S;
+    scanf("%lf %lf %lf %lf %lf %lf",&x1,&x2,&x3,&y1,&y2,&y3);
+    S = 1.0/2.0 * fabs(x1*y2 + x2*y3 + x3*y1 - (y1*x2 + y2*x3 + y3*x1));
+    printf("%.2lf",S);
     return 0;
 }
