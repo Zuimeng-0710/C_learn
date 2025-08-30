@@ -184,3 +184,126 @@ int main(){
     printf("%.2lf",S);
     return 0;
 }
+
+//海伦公式求三角形面积
+//S = \sqrt{s(s - a)*(s - b)*(s - c)}
+//s = (a + b + c) / 2
+#include <math.h>
+int main(){
+    int a,b,c;
+    scanf("%d",&a,&b,&c);
+    double s = (a + b + c) / 2.0;
+    double S = sqrt(s*(s - a)*(s - b)*(s - c));
+    printf("%lf",S);
+}
+
+//等差数列末项计算
+// int main(){
+//     int a1,a2,n;
+//     scanf("%d %d %d",&a1,&a2,&n);
+//     int d = a2 - a1;
+//     int n_num = a1 + (n - 1) * d;
+//     return 0;
+// }
+
+//A*B问题
+int main(){
+    int A,B;
+    scanf("%d %d",&A,&B);
+    if(A >= 1 && B >= 1)
+    printf("%d",A*B);
+    return 0;
+}
+
+//计算2的幂
+// #include <math.h>
+// int main(){
+//     int n;
+//     scanf("%d",&n);
+//     int pow_2 = pow(2,n);
+//     printf("%d",pow_2);
+//     return 0;
+// }
+
+//判断数的正负
+// int main(){
+//     long long int num;
+//     scanf("%lld",&num);
+//     if(num > 0){
+//         printf("positive");
+//     }
+//     else if(num == 0){
+//         printf("zero");
+//     }
+//     else{
+//         printf("negative");
+//     }
+//     return 0;
+// }
+
+//输出绝对值
+// #include <math.h>
+// int main(){
+//     double num;
+//     scanf("%lf",&num);
+//     num = fabs(num);
+//     if(num <= 10000){
+//         printf("%.2lf",num);
+//     }
+//     return 0;
+// }
+
+//奇偶数判断
+// int main(){
+//     int num;
+//     scanf("%d",&num);
+//     if(num % 2 == 0){
+//         printf("even");
+//     }
+//     else{
+//         printf("odd");
+//     }
+//     return 0;
+// }
+
+//奇偶ASCLL码值判断
+// int main(){
+//     char litter;
+//     scanf("%c",&litter);
+//     if(litter % 2 == 0){
+//         printf("NO");
+//     }
+//     else{
+//         printf("YES");
+//     }
+//     return 0;
+// }
+
+//整数大小比较
+int main(){
+    int num,num1;
+    scanf("%d %d",&num,&num1);
+    if(x > y){
+        printf(">");
+    }
+    else if(x == y){
+        printf("=");
+    }
+    else{
+        printf("<");
+    }
+    return 0;
+}
+
+//判断是否为两位数
+// int main(){
+//     int num;
+//     scanf("%d",&num);
+//     if(num >= 10 && num <= 99){
+//         printf("1");
+//     }
+//     else{
+//         printf("0");
+//     }
+//     return 0;
+// }
