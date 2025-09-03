@@ -168,17 +168,17 @@
 // }
 
 //计算邮资
-int Situation1(int num,char num1);
-int Situation2(int num,char num1);
-int Situation3(int num,char num1);
-int Situation4(int num,char num1);
+int Situation1(long long int num,char num1);
+int Situation2(long long int num,char num1);
+int Situation3(long long int num,char num1);
+int Situation4(long long int num,char num1);
 //声明函数
 int main()
 {
-    int Weight;
+    long long int Weight;
     char Litter;
-    int total_amount;
-    scanf("%d %c",&Weight,&Litter);
+    long long int total_amount;
+    scanf("%lld %c",&Weight,&Litter);
     if(Weight < 1000 && Litter == 'n'){
         total_amount = Situation1(Weight,Litter);
     }
@@ -218,7 +218,158 @@ int Situation4(int num,char num1){//情况4---重量超过1000克---加急
     int temp1 = (num - 1000) / 500;//整数
     double temp2 = temp - temp1;//浮点数
     if(temp2 < 1){
-        amount = 8 + temp1 * 4 + 4 + 4;
+        amount = 8 + temp1 * 4 + 4 + 5;
     }
     return amount;
 }
+
+//最大数输出
+// int main(){ 
+//     long int num1,num2,num3;
+//     scanf("%ld %ld %ld",&num1,&num2,&num3);
+//     long int temp;//存储中间值
+//     long int temp1;//存储第三值
+//     temp = num2;
+//     if(num1 > num3){
+//         temp1 = num1;
+//     } 
+//     else{
+//         temp1 = num3;
+//     }
+//     if(temp > temp1){
+//         printf("%ld",temp);
+//     }
+//     else{
+//         printf("%ld",temp1);
+//     }
+//     return 0;
+// }
+
+//三角形判断
+// int main(){
+//     int side1,side2,side3;
+//     scanf("%d %d %d",&side1,&side2,&side3);
+//     if((side1 + side2) > side3 && (side1 + side3) > side2 && (side2 + side3) > side1){
+//         printf("1");
+//     }
+//     else{
+//         printf("0");
+//     }
+//     return 0;
+// }
+
+// //点和正方形的关系
+// int main(){
+//     int x,y;
+//     scanf("%d %d",&x,&y);
+//     if(x >= -1 && x <= 1 && y >= -1 && y <= 1){
+//         printf("yes");
+//     }
+//     else{
+//         printf("no");
+//     }
+//     return 0;
+// }
+
+//简单计算器
+// int add(int num1, int num2); //加法
+// int minus(int num1, int num2); //减法
+// int time(int num1, int num2); //乘法
+// int divide(int num1, int num2); //除法
+
+// //声明函数
+// int main() {
+// 	int num1, num2;
+// 	char Character;
+// 	int result;
+// 	scanf("%d %d %c", &num1, &num2, &Character);
+// 	switch (Character) {
+// 		case'+':
+// 			result =  add(num1, num2);
+// 			printf("%d\n", result);
+// 			break;
+// 		case'-':
+// 			result =  minus(num1, num2);
+// 			printf("%d\n", result);
+// 			break;
+// 		case'*':
+// 			result =  time(num1, num2);
+// 			printf("%d\n", result);
+// 			break;
+// 		case'/':
+// 			if (num2 == 0) {
+// 				printf("Divided by zero!\n");//这里才开始判定
+// 			} else {
+// 				result =  divide(num1, num2);
+// 				printf("%d\n", result);
+// 			}
+// 			break;
+// 		default:
+// 			printf("Invalid operator!\n");
+// 			break;
+// 	}
+// }
+// //函数负责把输入的数运算返回到主函数内
+// int add(int num1, int num2) {
+// 	int result = num1 + num2;
+// 	return result;
+// }
+
+// int minus(int num1, int num2) {
+// 	int result = num1 - num2;
+// 	return result;
+// }
+
+// int time(int num1, int num2) {
+// 	int result = num1 * num2;
+// 	return result;
+// }
+
+// int divide(int num1, int num2) {
+// 	int result = num1 / num2;
+// 	return result;
+}
+
+//求一元二次方程
+#include <math.h>
+double root1(double a, double b, double c);
+double root2(double a, double b, double c);
+
+//声明函数
+int main() {
+	double a, b, c;
+	double result1, result2;
+	scanf("%lf %lf %lf", &a, &b, &c);
+	if (a == 0) {
+		printf("No answer!");
+		return 0;
+	}
+	double date = pow(b, 2) - 4 * a * c;
+	if (date == 0) {
+		result1 = root1(a, b, c);
+		printf("x1=x2=%.5lf", result1);
+	} else if (date < 0) {
+		printf("No answer!");
+	} else {
+		result1 = root1(a, b, c);
+		result2 = root2(a, b, c);
+		if (result1 > result2) {
+			printf("x1=%.5lf;x2=%.5lf", result2, result1);
+		} else {
+			printf("x1=%.5lf;x2=%.5lf", result1, result2);
+		}
+	}
+	return 0;
+}
+
+double root1 (double a, double b, double date) {
+	double x1 = (-b + sqrt(date)) / (2 * a);
+	return x1;
+}
+
+double root2(double a, double b, double date) {
+	double x2 = (-b - sqrt(date)) / (2 * a);
+	return x2;
+}
+
+//
