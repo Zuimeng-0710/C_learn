@@ -372,4 +372,47 @@ double root2(double a, double b, double date) {
 	return x2;
 }
 
-//今天不更新，但是要提交GitHub
+//求平均年龄
+int main(){
+    int num;
+    int sum = 0;
+    scanf("%d",&num);
+    for(int i = 0;i < num;i++){
+        int x;
+        scanf("%d",&x);
+        sum += x;
+    }
+    double avg = sum / num;
+    printf("%lf",avg);
+    return 0;
+}
+
+//均值
+int main(){
+    int n;
+    int sum = 0;
+    scanf("%d"&n);
+    for(int i = 0;i < n;i++){
+        double ai;
+        scanf("%lf",&ai);
+        sum += ai;
+    }
+    double avt = sum / n;
+    printf("%lf",avt);
+    return 0;
+}
+
+//求整数的和和均值
+int main(){
+    int n;
+    int sum = 0;
+    scanf("%d",&n);
+    for(int i = 0;i < n;i++){
+        int num;
+        scanf("%d\n",&num);
+        sum += num;
+    }
+    double avt = sum / n;
+    printf("%d %.5lf",sum,avt);
+    return 0;
+}
