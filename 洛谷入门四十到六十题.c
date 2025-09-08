@@ -416,3 +416,5 @@ int main(){
     printf("%d %.5lf",sum,avt);
     return 0;
 }
+
+return 0；
