@@ -382,8 +382,8 @@ int main(){
         scanf("%d",&x);
         sum += x;
     }
-    double avg = sum / num;
-    printf("%lf",avg);
+    double avg = sum * 1.0 / num;
+    printf("%.2lf",avg);
     return 0;
 }
 
@@ -391,14 +391,14 @@ int main(){
 int main(){
     int n;
     int sum = 0;
-    scanf("%d"&n);
+    scanf("%d",&n);
     for(int i = 0;i < n;i++){
         double ai;
         scanf("%lf",&ai);
         sum += ai;
     }
-    double avt = sum / n;
-    printf("%lf",avt);
+    double avt = sum * 1.0 / n;
+    printf("%.4lf",avt);
     return 0;
 }
 
@@ -412,7 +412,24 @@ int main(){
         scanf("%d\n",&num);
         sum += num;
     }
-    double avt = sum / n;
+    double avt = sum * / n;
     printf("%d %.5lf",sum,avt);
     return 0;
+}
+
+//最高的分数
+int main(){
+    int people_count;
+    scanf("%d",&people_count);//输入学生人数
+    //输入第一个学生成绩
+    int max;
+    scanf("%d",&max);
+    for(int i = 1;i < people_count;i++){
+        int score;
+        scanf("%d",&score);
+        if(max < score){
+            max = score;
+        }
+    }
+    printf("%d",score);
 }
