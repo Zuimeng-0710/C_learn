@@ -433,3 +433,40 @@ int main(){
     }
     printf("%d",score);
 }
+
+//奥运奖牌计数
+int main(){
+    int n;
+    int Gold,Sliver,bronze;
+    int sum = 0;
+    scanf("%d",&n);
+    for(int i = 1;i <= n;i++){
+        scanf("%d %d %d",&Gold,&Sliver,&bronze);
+        sum = Gold + Sliver + bronze;
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+//奇数求和
+int mian(){
+    int num1,num2;
+    int sum = 0;
+    int temp = 0;
+    scanf("%d %d",&num1,&num2);//7~15 7 9 11 13 15   7~17 7 9 11 13 15 17
+    for(int i = 0;i < (num2 - num1) / 2 + 1;i++){
+        if(num1 % 2 == 1){
+            temp = num1 + 2;
+        }
+        else{
+            temp = num1 + 1;
+        }
+        sum = num1 + num2 + temp;
+        while(temp < num2 || temp = num2){
+            temp += 2;
+            sum += temp;
+        }
+    }
+    printf("%d",sum);
+    return 0;
+}
