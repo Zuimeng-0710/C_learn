@@ -66,3 +66,78 @@ int main(){
     }
     return 0;
 }
+
+//鸡尾酒疗法
+int main(){
+    int n;
+    double sum_clinical_1,valid_clinical_1;//鸡尾酒疗法
+    double sum_clinical_2,valid_clinical_2;//改进疗法
+    double sum,sum1;
+    scanf("%d",&n);
+    scanf("%lf %lf",&sum_clinical_1,&valid_clinical_1);
+    sum = valid_clinical_1 / sum_clinical_1;
+    for(int i = 0;i < n;i++){
+        scanf("%d %d",&sum_clinical_2,&valid_clinical_2);
+        sum1 = valid_clinical_2 / sum_clinical_2;
+    }
+    if(sum1 - sum > 0.05){
+            printf("better");
+        }
+    else if(sum - sum1 > 0.05){
+        printf("worse");
+        }
+    else{
+        printf("same");
+    }
+    return 0;
+
+//救援
+#include <math.h>
+int main() {
+	int n;//屋顶
+	scanf("%d", &n);
+	double x, y; //坐标位置
+	int count;//人数
+	for (int i = 0; i < n; i++) {
+
+		scanf("%lf %lf %d", &x, &y, &count);
+	}
+	double sum = 0;
+	double line_long = sqrt(x * x + y * y);
+	sum = 0.5 * count + 1.0 * count + line_long / 50 * 2.0;
+	printf("%.0lf", sum);
+	return 0;
+}
+
+//药房管理
+int main(){
+    int m;//药品总量
+    scanf("%d",&m);
+    int n;//取药人数
+    scanf("%d",&n);
+    int t;//取走的药品
+    int ans;//无法取药的人
+    while(n--){
+        scanf("%d",&t);
+        m >= t ? m -= t : ans++;
+    }
+    printf("%d",ans);
+    return 0;
+}
+
+//统计满足条件的四位数
+int main(){
+    int n;
+    int four_number;
+    for(int i = 0;i < n;i++){
+        scanf("%d",four_number); 
+        int ones,tens,hundreds,thousands;
+        //个位
+        ones = four_number / 10;
+               
+    }
+
+
+
+    return 0;
+}
