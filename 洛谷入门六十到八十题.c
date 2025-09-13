@@ -126,17 +126,61 @@ int main(){
 }
 
 //统计满足条件的四位数
+int main() {
+	int n;
+	int four_number;
+	int ans = 0;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &four_number);
+		int ones, tens, hundreds, thousands;
+		//个位
+		ones = four_number % 10;
+		//十位
+		tens = four_number % 100 / 10;
+		//百位
+		hundreds = four_number / 100 % 10;
+		//千位
+		thousands = four_number / 1000;
+		if (ones - tens - hundreds - thousands > 0) {
+			ans++;
+		}
+	}
+	printf("%d", ans);
+	return 0;
+}
+
+//求分数序列和
+int main(){
+    int p = 1,q = 2;//q1,p1
+    double sum;
+    sum = q / p * 1.0;
+    int n;
+    scanf("%d",&n);
+    for(int i = 1;i < n;i++){
+        q = q + p;
+        p = q;
+        int temp = q / p;
+        sum += temp;
+    }
+    printf("%.4lf",sum);
+    return 0;
+}
+
+//计算分数加减表达式的值
 int main(){
     int n;
-    int four_number;
+    scanf("&d",&n);
     for(int i = 0;i < n;i++){
-        scanf("%d",four_number); 
-        int ones,tens,hundreds,thousands;
-        //个位
-        ones = four_number / 10;
-               
-    }
+        if(n % 2 == 0){
+            
 
+        }
+        if(n % 2 == 1){
+
+
+        }
+    }
 
 
     return 0;
