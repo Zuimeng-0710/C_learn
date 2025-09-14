@@ -470,3 +470,19 @@ int mian(){
     printf("%d",sum);
     return 0;
 }
+
+//满足条件的数累加
+int main(){
+    int m,n;
+    int sum = 0;
+    scanf("%d %d",&m,&n);
+    while(m < n){
+        if(m % 17 == 0){
+            sum += m;
+        }
+        else{
+            m++;
+        }
+    }
+    return 0;
+}
