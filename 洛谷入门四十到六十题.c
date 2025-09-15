@@ -328,7 +328,7 @@ int Situation4(int num,char num1){//情况4---重量超过1000克---加急
 // int divide(int num1, int num2) {
 // 	int result = num1 / num2;
 // 	return result;
-}
+//}
 
 //求一元二次方程
 #include <math.h>
@@ -414,75 +414,5 @@ int main(){
     }
     double avt = sum * / n;
     printf("%d %.5lf",sum,avt);
-    return 0;
-}
-
-//最高的分数
-int main(){
-    int people_count;
-    scanf("%d",&people_count);//输入学生人数
-    //输入第一个学生成绩
-    int max;
-    scanf("%d",&max);
-    for(int i = 1;i < people_count;i++){
-        int score;
-        scanf("%d",&score);
-        if(max < score){
-            max = score;
-        }
-    }
-    printf("%d",score);
-}
-
-//奥运奖牌计数
-int main(){
-    int n;
-    int Gold,Sliver,bronze;
-    int sum = 0;
-    scanf("%d",&n);
-    for(int i = 1;i <= n;i++){
-        scanf("%d %d %d",&Gold,&Sliver,&bronze);
-        sum = Gold + Sliver + bronze;
-    }
-    printf("%d",sum);
-    return 0;
-}
-
-//奇数求和
-int mian(){
-    int num1,num2;
-    int sum = 0;
-    int temp = 0;
-    scanf("%d %d",&num1,&num2);//7~15 7 9 11 13 15   7~17 7 9 11 13 15 17
-    for(int i = 0;i < (num2 - num1) / 2 + 1;i++){
-        if(num1 % 2 == 1){
-            temp = num1 + 2;
-        }
-        else{
-            temp = num1 + 1;
-        }
-        sum = num1 + num2 + temp;
-        while(temp < num2 || temp = num2){
-            temp += 2;
-            sum += temp;
-        }
-    }
-    printf("%d",sum);
-    return 0;
-}
-
-//满足条件的数累加
-int main(){
-    int m,n;
-    int sum = 0;
-    scanf("%d %d",&m,&n);
-    while(m < n){
-        if(m % 17 == 0){
-            sum += m;
-        }
-        else{
-            m++;
-        }
-    }
     return 0;
 }
