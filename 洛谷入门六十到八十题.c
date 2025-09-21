@@ -190,5 +190,7 @@ int main(){
     int b,c;
     int c,d; 
     int h,g;
+    int k,g;
+    
     return 0;
 }
