@@ -191,6 +191,8 @@ int main(){
     int c,d; 
     int h,g;
     int k,g;
+    int g,h;
+    
     
     return 0;
 }
