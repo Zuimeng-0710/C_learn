@@ -187,12 +187,6 @@ int main(){
 //
 int main(){
     int a,b;
-    int b,c;
-    int c,d; 
-    int h,g;
-    int k,g;
-    int g,h;
-    
-    
+    int p,b;
     return 0;
 }
