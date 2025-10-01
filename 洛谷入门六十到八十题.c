@@ -189,5 +189,6 @@ int main(){
     printf("HelloWorld");
     int a,b,c;
     int b,c,d;
+    int c,d,f;
     return 0;
 }
