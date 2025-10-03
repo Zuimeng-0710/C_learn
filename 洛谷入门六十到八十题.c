@@ -185,11 +185,7 @@ int main(){
 }
 
 int main(){
-    printf("Hello World");
-    printf("HelloWorld");
-    int a,b,c;
-    int b,c,d;
-    int c,d,f;
-    int cd;
+    
+
     return 0;
 }
