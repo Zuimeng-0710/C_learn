@@ -185,7 +185,8 @@ int main(){
 }
 
 int main(){
-    int a,b;
+    int a,b;]
+    int b,c;
 
     return 0;
 }
