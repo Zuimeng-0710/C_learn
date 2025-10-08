@@ -188,5 +188,6 @@ int main(){
     int a,b;
     int b,c;
     int a,c;
+    int a,b;
     return 0;
 }
