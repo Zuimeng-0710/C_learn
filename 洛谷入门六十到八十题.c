@@ -184,10 +184,5 @@ int main(){
     return 0;
 }
 
-int main(){
-    int a,b;
-    int b,c;
-    int a,c;
-    int a,b;
-    return 0;
-}
+
+
