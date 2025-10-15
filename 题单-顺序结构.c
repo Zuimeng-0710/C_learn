@@ -190,3 +190,9 @@ int main()
 	printf("%d%d:%d%d",h1,h2,m1,m2);
 }
 
+//
+int main(){
+
+
+	return 0;
+}
