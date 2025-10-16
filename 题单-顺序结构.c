@@ -190,9 +190,14 @@ int main()
 	printf("%d%d:%d%d",h1,h2,m1,m2);
 }
 
-//
+//NOIP 2017普及组 成绩
 int main(){
-
-
+	double sum_score = 0;
+	int homework_score,test_score,exam_score;
+	scanf("%d %d %d",&homework_score,&test_score,&exam_score);
+	sum_score = homework_score * 0.2 + test_score * 0.3 + exam_score * 0.5;
+	printf("%lf",sum_score);
 	return 0;
 }
+
+//sequentialStructures
