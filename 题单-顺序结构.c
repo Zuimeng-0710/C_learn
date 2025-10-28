@@ -201,3 +201,95 @@ int main(){
 }
 
 //sequentialStructures
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	int a,b,c;
+	scanf("%d %d %d",&a,&b,&c);
+	double s = (a + b + c) / 2.0;
+	double S = sqrt(s * (s - a) * (s - b) * (s - c));
+	printf("%.2f",S);
+	return 0;
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	int a,b,c;
+	scanf("%d %d %d",&a,&b,&c);
+	int q_n = sqrt(b * b - 4 * a * c);//求根
+
+	if(q_n > 0){
+		printf("%d %d",(-b + q_n) /  2 * a,(-b - q_n) / 2 * a);
+	}	
+	else if(q_n > 0){
+		printf("%d",(-b + q_n) /  2 * a);
+	}
+	else{
+		printf("没有根");
+	}
+	return 0;
+}
+
+#include <stdio.h>
+
+int main(){
+	int week_number;
+	scanf("%d",&week_number);
+	switch(week_number){
+		case 1:
+			printf("Monday");
+			break;
+		case 2:
+			printf("Tuesday");
+			break;
+		case 1:
+			printf("Wednesday");
+			break;
+		case 1:
+			printf("Thusday");
+			break;
+		case 1:
+			printf("Friday");
+			break;
+		case 1:
+			printf("Saturday");
+			break;
+		case 1:
+			printf("Sunday");
+			break;
+	}
+	return 0;
+}
+
+
+#include <stdio.h>
+
+int main(){
+	int sum_zero = 0;
+	int sum_positive = 0;
+	int sum_negative = 0;
+	for(int i = 0;i < 6;i++){
+		int m;
+		scanf("%d",&m);
+		if(m > 0){
+			sum_positive++;
+		}
+		else if(m == 0){
+			sum_zero++;
+		}
+		else{
+			sum_negative++;
+		}
+	}
+	return 0;
+}
+
+
+
+
